@@ -1,7 +1,7 @@
 // pages/index.js
 
 import { fetchCameras } from '../lib/contentfulClient';
-import './styles.css'; // Assuming you have a styles.css for your classes
+import './styles.css'; 
 
 export default function Home({ cameras }) {
   return (

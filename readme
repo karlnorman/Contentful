@@ -1,0 +1,35 @@
+Outlining the steps taken to integrate Contently Headless CMS into my Next.js application.
+
+Before starting, I made sure i had the following:
+
+An active Contently account
+API access credentials (API Key and Secret)
+A Next.js application set up
+
+Created a .env file to save my CONTENTFUL_SPACE_ID and CONTENTFUL_ACCESS_TOKEN values on it
+
+Created a utility or lib folder and created contentfulClient.js file inside it (lib/contentfulClient.js)
+
+In the contentfulClient.js file, I set up the API client with the Contently API
+
+Created a pages folder where I created an index.js file
+
+In the index.js script, I fetched the content by importing it from lib/contentfulClient.js
+
+Created a styles.css within the pages folder for app aesthetics and better user experience
+
+Tested output. Here are a few among many errors encountered:
+~ module not found
+~ fetch Errors
+~ network errors - i changed (localhost:8080) to (localhost:3000) on launch.json and it worked
+
+Created a new Github Repository
+
+Added my files into the repository
+Made my first commit then pushed.
+
+Created a Vercel account and successfully deployed the app >>> ![alt text](<Screenshot 2025-03-02 at 3.57.11 PM.png>)
+
+Created a Readme file.
+
+Second commit. Pushed.

@@ -19,34 +19,33 @@ body {
 
 .camera-card {
   flex: 0 1 calc(33.33% - 10px); /* Three items per row with some space */
-  box-sizing: border-box; /* Ensures padding and border are included in total width */
-  margin-bottom: 20px; /* Space between rows */
+  box-sizing: border-box;
+  margin-bottom: 20px;
   border: 1px solid #000000;
   padding: 20px;
 }
 
 .camera-image {
   max-width: 100%; /* Ensures image scales with the container */
-  height: auto; /* Maintains aspect ratio */
+  height: auto;
   border: 1px solid #000000;
   border-radius: 5px;
-  min-width: 320px; /* Minimum width for image */
+  min-width: 320px;
   transition: transform 0.8s ease;
 }
 
 .camera-image:hover {
-  transform: scale(1.05); /* Scale up on hover */
+  transform: scale(1.05);
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .camera-card {
-    flex: 0 1 calc(33.33% - 10px); /* Three items per row */
+    flex: 0 1 calc(33.33% - 10px);
   }
 }
 
 @media (max-width: 480px) {
   .camera-card {
-    flex: 0 1 calc(50% - 10px); /* Two items per row */
+    flex: 0 1 calc(50% - 10px);
   }
 }
