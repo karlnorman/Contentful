@@ -1,27 +1,32 @@
 // pages/index.js
-import client from '../lib/contentfulClient';
+
+import { fetchCameras } from '../lib/contentfulClient';
+import './styles.css'; // Assuming you have a styles.css for your classes
+
+export default function Home({ cameras }) {
+  return (
+    <div>
+      <h1 className="header">CAMERA SHOP</h1>
+      <div className="camera-container">
+        {cameras.map((camera) => (
+          <div key={camera.sys.id} className="camera-card">
+            <img src={camera.fields.image.fields.file.url} alt={camera.fields.name} className="camera-image" />
+            <h2>{camera.fields.model}</h2>
+            <p>{camera.fields.brand}</p>
+            <p>Price: ${camera.fields.price}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export async function getStaticProps() {
-  const res = await client.getEntries({ content_type: 'yourContentType' });
-
+  const cameras = await fetchCameras();
   return {
     props: {
-      items: res.items,
+      cameras,
     },
   };
 }
 
-const HomePage = ({ items }) => {
-  return (
-    <div>
-      <h1>Your Content</h1>
-      <ul>
-        {items.map((item) => (
-          <li key={item.sys.id}>{item.fields.title}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default HomePage;
