@@ -6,6 +6,12 @@ An active Contently account
 API access credentials (API Key and Secret)
 A Next.js application set up
 
+Created a space in Contentful
+Created a content model (camera) and setup fields with corresponding fieldtypes (image-media, model-shorttext, brand-shorttext, price-integer)
+Filled up the Content tab by adding entries (which can be edited) to the fields
+Published to update the status of each field.
+Went to setting to find the API Keys needed.
+
 Created a .env file to save my CONTENTFUL_SPACE_ID and CONTENTFUL_ACCESS_TOKEN values on it
 
 Created a utility or lib folder and created contentfulClient.js file inside it (lib/contentfulClient.js)
@@ -33,3 +39,5 @@ Created a Vercel account and successfully deployed the app >>> ![alt text](<Scre
 Created a Readme file.
 
 Second commit. Pushed.
+
+Third Commit. Pushed.
